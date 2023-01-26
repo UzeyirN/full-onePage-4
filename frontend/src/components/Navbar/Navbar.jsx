@@ -12,12 +12,12 @@ const Navbar = () => {
         </div>
         <div className='nav-pages'>
           <ul className='nav-ul'>
-            <li className='nav-li'><Link className='nav-link'> HOME</Link></li>
-            <li className='nav-li'><Link className='nav-link'> ABOUT US</Link></li>
-            <li className='nav-li'><Link className='nav-link'> COURSES</Link></li>
-            <li className='nav-li'><Link className='nav-link'> ELEMENTS</Link></li>
-            <li className='nav-li'><Link className='nav-link'> NEWS</Link></li>
-            <li className='nav-li'><Link className='nav-link'> CONTACT</Link></li>
+            <li className='nav-li'><Link to='' className='nav-link'> HOME</Link></li>
+            <li className='nav-li'><Link to='about' className='nav-link'> ABOUT US</Link></li>
+            <li className='nav-li'><Link to='courses' className='nav-link'> COURSES</Link></li>
+            <li className='nav-li'><Link to='elements' className='nav-link'> ELEMENTS</Link></li>
+            <li className='nav-li'><Link to='add' className='nav-link'> ADD</Link></li>
+            <li className='nav-li'><Link to='contact' className='nav-link'> CONTACT</Link></li>
           </ul>
         </div>
         <div className='nav-contact'>

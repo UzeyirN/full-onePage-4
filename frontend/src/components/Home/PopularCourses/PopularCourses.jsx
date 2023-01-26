@@ -7,11 +7,25 @@ import axios from 'axios'
 const PopularCourses = () => {
     const [courses, setCourses] = useState(null)
     const [value, setValue] = useState('')
-    const [sorted,setSorted]=useState({
-        
+    const [sorted, setSorted] = useState({
+        sorted: "price", reversed: false
     })
 
+    //!sort
+    const sortData = () => {
+        setSorted({ sorted: "price", reversed: !sorted.reversed })
+        const dataCopy = [...courses]
 
+        dataCopy.sort((a, b) => {
+            if (sorted.reversed) {
+                return a.price - b.price
+            }
+            return b.price - a.price
+        })
+        setCourses(dataCopy)
+    }
+
+    //!get
     const getData = () => {
         fetch('http://localhost:3070/courses')
             .then((response) => response.json())
@@ -22,6 +36,7 @@ const PopularCourses = () => {
         getData()
     }
 
+    //!filter
     const handleChanges = (e) => {
         setValue(e.target.value)
     }
@@ -36,8 +51,12 @@ const PopularCourses = () => {
             <div className='pop-courses__wrapper'>
                 <div className='pop-span my-4'></div>
                 <h1 style={{ fontSize: "36px" }}>Popular Courses</h1>
+
                 <p>Filter...</p>
                 <input type='text' onChange={handleChanges}></input>
+
+                <p>Sort...</p>
+                <button onClick={sortData}>Sort</button>
                 <div className="container pop-container">
                     <div className="row">
                         {

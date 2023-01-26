@@ -3,7 +3,7 @@ import Home from './../pages/Home';
 import AboutUs from './../pages/AboutUs';
 import Courses from './../pages/Courses';
 import Elements from './../pages/Elements';
-import News from './../pages/News';
+import Add from './../pages/Add';
 import Contact from './../pages/Contact';
 
 const ROUTES = [
@@ -28,8 +28,8 @@ const ROUTES = [
                 element: <Elements />
             },
             {
-                path: "news",
-                element: <News />
+                path: "add",
+                element: <Add />
             },
             {
                 path: "contact",

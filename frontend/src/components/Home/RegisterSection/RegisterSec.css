@@ -1,0 +1,36 @@
+.resgister-sec__wrapper{
+    width: 100%;
+}
+.register-left{
+    height: 500px;
+    background-color: RGB(255, 182, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-right{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-left__content{
+    width: 60%;
+    height: 50%;
+    text-align: center;
+}
+.register-right__content{
+    width: 60%;
+    height: 50%;
+    text-align: center;
+}
+.register-input{
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
